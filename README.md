@@ -1,6 +1,7 @@
 # Jieun's Uaena Helper (v1.2.0)
 
 IU (Lee Ji-eun) hayranları için sayfalandırılmış diskografi, ruh haline göre şarkı önerileri ve eğlenceli mini oyunlar içeren etkileşimli bir Discord asistanı. (Sadece Türkçe olarak mevcuttur)
+Sadece botu sunucunuza eklemek istiyorsanız bu linki kullanın ve aşağıda belirtilen adımları göz ardı edin: https://discord.com/oauth2/authorize?client_id=1484879171183443978&permissions=5066929685518400&integration_type=0&scope=bot
 
 ---
 # Kurulum
