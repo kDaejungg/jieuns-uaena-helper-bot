@@ -180,7 +180,7 @@ async def karakter(interaction: discord.Interaction):
     embed = base_embed("Hangi IU Karakterisin?", f"Sen: **{char}**\n\n{desc}")
     await interaction.response.send_message(embed=embed)
 
-@bot.tree.command(name="oneri", description="Şu anki moduna göre bir IU şarkısı önerisi al. Önce @kDaejungg'a sorsan daha iyi olur!")
+@bot.tree.command(name="oneri", description="Şu anki moduna göre bir IU şarkısı önerisi al.")
 async def oneri(interaction: discord.Interaction):
     embed = discord.Embed(
         title="🎭 Modun Nasıl?", 
