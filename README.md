@@ -60,7 +60,7 @@ Windows'ta PowerShell veya Komut İstemi (CMD) kullanabilirsiniz. Python'ın sis
 1. **Depoyu Klonlayın:**
    ```powershell
    git clone https://github.com/kDaejungg/jieuns-uaena-helper-bot.git
-cd jieuns-uaena-helper-bot
+   cd jieuns-uaena-helper-bot
    ```
 2. **Sanal Ortam Oluşturun:**
    ```powershell
@@ -88,7 +88,7 @@ Mac kullanıcıları Terminal uygulamasını kullanarak aşağıdaki adımları 
 1. **Depoyu Klonlayın:**
    ```bash
    git clone https://github.com/kDaejungg/jieuns-uaena-helper-bot.git
-cd jieuns-uaena-helper-bot
+   cd jieuns-uaena-helper-bot
    ```
 2. **Sanal Ortam Oluşturun:**
    ```bash
@@ -121,4 +121,4 @@ cd jieuns-uaena-helper-bot
 `bot.py` dosyasındaki `TOKEN` kısmına kendi bot anahtarınızı girmelisiniz. Projeyi GitHub'da herkese açık (Public) paylaşmadan önce bu token'ı sildiğinizden veya `.env` dosyasına taşıdığınızdan emin olun.
 
 ---
-*Made with 💜 for Uaenas by kDaejungg*
+*Made with 💜 for Uaenas by Enes Ramazan Whitelineage*
