@@ -106,7 +106,21 @@ class MoodView(discord.ui.View):
     async def peaceful(self, interaction: discord.Interaction, button: discord.ui.Button):
         await self.send_recommendation(interaction, "uykulu_huzurlu")
 
+class SNSView(discord.ui.View):
+    def __init__(self):
+        super().__init__()
+        self.add_item(discord.ui.Button(label="Instagram", url="https://www.instagram.com/dlwlrma/", style=discord.ButtonStyle.link))
+        self.add_item(discord.ui.Button(label="YouTube", url="https://www.youtube.com/@dlwlrma", style=discord.ButtonStyle.link))
+        self.add_item(discord.ui.Button(label="Twitter (X)", url="https://x.com/_IUofficial", style=discord.ButtonStyle.link))
+        self.add_item(discord.ui.Button(label="Facebook", url="https://www.facebook.com/iu.loen", style=discord.ButtonStyle.link))
+
+
+
 bot = IUBot()
+
+
+
+
 
 def base_embed(title, description=None):
     embed = discord.Embed(title=title, description=description, color=IU_COLOUR)
@@ -125,7 +139,13 @@ async def iu(interaction: discord.Interaction):
     
     embed.add_field(
         name="✨ Eğlence & Etkileşim", 
-        value="`/karakter` - Hangi IU dizi karakterisin?\n`/oneri` - Moduna göre IU şarkısı önerisi", 
+        value="`/karakter` - Hangi IU dizi karakterisin?\n`/oneri` - Moduna göre IU şarkısı önerisi\n`/sns` - Resmî sosyal medya hesapları", 
+        inline=False
+    )
+    
+    embed.add_field(
+        name="🛠️ Bot Hakkında",
+        value="`/hakkinda` - Bot ve geliştirici bilgilerini gösterir.",
         inline=False
     )
     
@@ -134,8 +154,15 @@ async def iu(interaction: discord.Interaction):
 
 @bot.tree.command(name="bio", description="IU biyografisi")
 async def bio(interaction: discord.Interaction):
+    file = discord.File("pictures/bio.jpeg", filename="result.jpeg")
     embed = base_embed("IU — Biyografi", BIO)
-    await interaction.response.send_message(embed=embed)
+    embed.add_field(
+        name="Daha Fazla Bilgi", 
+        value="[IU Wikipedia Sayfası](https://tr.wikipedia.org/wiki/IU_(şarkıcı))", 
+        inline=False
+    )
+    embed.set_image(url="attachment://result.jpeg")
+    await interaction.response.send_message(file=file, embed=embed)
 
 @bot.tree.command(name="disk", description="IU diskografisini sayfalarla incele")
 @app_commands.describe(tip="Hangi listeyi görmek istersin?")
@@ -176,11 +203,25 @@ async def fact(interaction: discord.Interaction):
 
 @bot.tree.command(name="karakter", description="Hangi IU karakterisin?")
 async def karakter(interaction: discord.Interaction):
-    char, desc = random.choice(list(CHARACTERS.items()))
-    embed = base_embed("Hangi IU Karakterisin?", f"Sen: **{char}**\n\n{desc}")
-    await interaction.response.send_message(embed=embed)
+    selected_char = random.choice(CHARACTERS)
+    
+    char_id = selected_char['id']
+    char_name = selected_char['name']
+    char_desc = selected_char['desc']
+    image_filename = f"{char_id}.jpg" 
+    image_path = os.path.join("pictures", image_filename)
+    
+    embed = base_embed("Hangi IU Karakterisin?", f"Sen: **{char_name}**\n\n{char_desc}")
+    
+    if os.path.exists(image_path):
+        file = discord.File(image_path, filename="result.jpg")
+        embed.set_image(url="attachment://result.jpg")
+        await interaction.response.send_message(file=file, embed=embed)
+    else:
+        print(f"❌ Resim bulunamadı: {image_path}")
+        await interaction.response.send_message(embed=embed)
 
-@bot.tree.command(name="oneri", description="Şu anki moduna göre bir IU şarkısı önerisi al.")
+@bot.tree.command(name="oneri", description="Şu anki moduna göre bir IU şarkısı önerisi al. Önce @kDaejungg'a sorsan daha iyi olur!")
 async def oneri(interaction: discord.Interaction):
     embed = discord.Embed(
         title="🎭 Modun Nasıl?", 
@@ -201,15 +242,28 @@ async def hakkinda(interaction: discord.Interaction):
     
     embed.add_field(name="Sürüm", value=ABOUT_DATA['version'], inline=True)
     embed.add_field(name="Geliştirici", value=ABOUT_DATA['developer'], inline=True)
-    
     features_text = "\n".join(f"• {f}" for f in ABOUT_DATA['features'])
     embed.add_field(name="Özellikler", value=features_text, inline=False)
-    
     embed.add_field(name="Not", value=ABOUT_DATA['credits'], inline=False)
-    
+    embed.add_field(name="Lisans", value=f"⚖️ {ABOUT_DATA['license']}", inline=True)
+    embed.add_field(name="GitHub", value=f"[🔗 Kaynak Kod]({ABOUT_DATA['github_repo']})", inline=True)
     embed.set_footer(text="Uaena topluluğu için sevgiyle yapıldı✨")
-    
     await interaction.response.send_message(embed=embed)
+
+@bot.tree.command(name="sns", description="IU'nun resmi sosyal medya hesapları")
+async def sns(interaction: discord.Interaction):
+    file = discord.File("pictures/iu_sns.jpg", filename="sns_thumb.jpg")
+    embed = base_embed(
+        "IU'nun Sosyal Medya Hesapları", 
+        "IU'yu resmi kanallardan takip etmek için aşağıdaki butonları kullanabilirsin:"
+    )
+    embed.set_thumbnail(url="attachment://sns_thumb.jpg")
+    
+    view = SNSView()
+    await interaction.response.send_message(file=file, embed=embed, view=view)
+
+
+
 
 @bot.event
 async def on_ready():
