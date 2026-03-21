@@ -135,6 +135,34 @@ Mac kullanıcıları Terminal uygulamasını kullanarak aşağıdaki adımları 
 
 ---
 
+## 🛠️ Botun Kurulumu ve Sunucuya Davet Edilmesi
+
+Botunuzu çalıştırdıktan sonra sunucunuza eklemek için aşağıdaki adımları izleyin:
+
+### 1. OAuth2 Linki Oluşturma
+1. **[Discord Developer Portal](https://discord.com/developers/applications)**'a gidin ve uygulamanızı seçin.
+2. Sol menüden **OAuth2** -> **URL Generator** sekmesine tıklayın.
+3. **Scopes** (Kapsamlar) kısmından şunları işaretleyin:
+   - [x] `bot`
+   - [x] `applications.commands` (Slash komutlarının çalışması için zorunludur)
+
+### 2. Gerekli İzinlerin Seçilmesi (Permissions)
+Aynı sayfada aşağıda açılan **Bot Permissions** kısmından tam olarak şu izinleri işaretleyin:
+
+✅ Uygulama Komutlarını Kullan
+✅ Mesaj Gönder
+✅ Bağlantı Yerleştir (Embeds)
+✅ Dosya Ekle
+✅ Tepki Ekle
+✅ Mesaj Geçmişini Oku
+✅ Alt Başlıklarda Mesajlar Gönder
+
+### 3. Davet Etme
+4. Sayfanın en altında oluşan **Generated URL** bağlantısını kopyalayın.
+5. Bu bağlantıyı tarayıcınıza yapıştırarak botu istediğiniz sunucuya davet edin.
+
+> **⚠️ Önemli Not:** Eğer botu sunucuya ekledikten sonra `/` yazdığınızda komutlar görünmüyorsa, Discord uygulamanızı yeniden başlatın veya botun "Uygulama Komutlarını Kullanma" izni olduğundan emin olun.
+
 ## 📂 Dosya Yapısı ve İçerik
 
 - `bot.py`: Ana bot motoru ve Discord komutları.
