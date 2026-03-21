@@ -150,11 +150,17 @@ Botunuzu çalıştırdıktan sonra sunucunuza eklemek için aşağıdaki adımla
 Aynı sayfada aşağıda açılan **Bot Permissions** kısmından tam olarak şu izinleri işaretleyin:
 
 ✅ Uygulama Komutlarını Kullan
+
 ✅ Mesaj Gönder
+
 ✅ Bağlantı Yerleştir (Embeds)
+
 ✅ Dosya Ekle
+
 ✅ Tepki Ekle
+
 ✅ Mesaj Geçmişini Oku
+
 ✅ Alt Başlıklarda Mesajlar Gönder
 
 ### 3. Davet Etme
