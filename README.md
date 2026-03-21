@@ -3,8 +3,10 @@
 IU hayranları için tasarlanmış, modern Discord arayüz özelliklerini (Buttons, Slash Commands) kullanan interaktif bir asistan botu.
 
 ---
+# Kurulum
 
-## 🐧 Linux
+Kullandığınız İS'ye göre adımları uygulayınız.
+## Linux
 
 Linux sistemlerde Python genellikle yüklü gelir. Terminalinizi açın ve şu adımları izleyin:
 
