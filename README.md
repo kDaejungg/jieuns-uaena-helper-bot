@@ -135,7 +135,7 @@ Mac kullanıcıları Terminal uygulamasını kullanarak aşağıdaki adımları 
 
 ---
 
-## 🛠️ Botun Kurulumu ve Sunucuya Davet Edilmesi
+## Botun Kurulumu ve Sunucuya Davet Edilmesi
 
 Botunuzu çalıştırdıktan sonra sunucunuza eklemek için aşağıdaki adımları izleyin:
 
