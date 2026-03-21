@@ -2,6 +2,7 @@
   "bot_name": "Jieun's Uaena Helper",
   "version": "1.2.0",
   "developer": "Enes Ramazan Whitelineage",
+  "license": "MIT License",
   "description": "IU (Lee Ji-eun) hayranları için sayfalandırılmış diskografi, ruh haline göre şarkı önerileri ve eğlenceli mini oyunlar içeren etkileşimli bir Discord asistanı. (Sadece Türkçe olarak mevcuttur)",
   "features": [
     "Sayfalı Diskografi Görüntüleme",
@@ -10,7 +11,7 @@
     "Rastgele Bilgi (Fact) Sistemi",
     "Detaylı Şarkı Bilgileri"
   ],
-  "credits": "Veriler IU'nun resmi diskografisinden ve hayran kaynaklarından derlenmiştir.",
+  "credits": "Veriler IU'nun resmi diskografisinden ve hayran kaynaklarından derlenmiştir. Bu proje MIT Lisansı altında korunmaktadır.",
   "language": "Turkish",
   "github_repo": "https://github.com/kDaejungg/jieuns-uaena-helper-bot"
 }
