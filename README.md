@@ -1,4 +1,4 @@
-# Jieun's Uaena Helper (v1.2.0)
+# Jieun's Uaena Helper (v1.3.0)
 EN: An interactive Discord assistant for IU (Lee Ji-eun) fans, featuring a paginated discography, mood-based song recommendations, and fun mini-games. (Only available in Turkish)
 
 TR: IU (Lee Ji-eun) hayranları için sayfalandırılmış diskografi, ruh haline göre şarkı önerileri ve eğlenceli mini oyunlar içeren etkileşimli bir Discord asistanı. (Sadece Türkçe olarak mevcuttur)
