@@ -1,6 +1,6 @@
 # Jieun's Uaena Helper (v1.2.0)
 
-IU hayranları için tasarlanmış, modern Discord arayüz özelliklerini (Buttons, Slash Commands) kullanan interaktif bir asistan botu.
+IU (Lee Ji-eun) hayranları için sayfalandırılmış diskografi, ruh haline göre şarkı önerileri ve eğlenceli mini oyunlar içeren etkileşimli bir Discord asistanı. (Sadece Türkçe olarak mevcuttur)
 
 ---
 # Kurulum
