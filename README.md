@@ -6,6 +6,25 @@ IU hayranları için tasarlanmış, modern Discord arayüz özelliklerini (Butto
 # Kurulum
 
 Kullandığınız İS'ye göre adımları uygulayınız.
+## Yapılandırma 
+
+Botun çalışması için bir "Discord Bot Token"ına ihtiyacınız var. Eğer nasıl alınacağını bilmiyorsanız [Discord Developer Portal](https://discord.com/developers/applications) üzerinden bir uygulama oluşturup "Bot" sekmesinden token'ınızı kopyalayabilirsiniz.
+
+### Adım Adım Token Kurulumu:
+
+1. **Gizli Dosyaları Görünür Yapın:**
+   - **Windows:** Klasörde yukarıdaki "Görünüm" sekmesinden "Gizli Öğeler" kutucuğunu işaretleyin.
+   - **Linux / macOS:** Klasör içindeyken `Ctrl + H` tuşlarına basarak `.env.example` dosyasını görünür yapın.
+
+2. **Dosyayı Hazırlayın:**
+   - `.env.example` dosyasının ismine sağ tıklayıp "Yeniden Adlandır" deyin.
+   - Sondaki `.example` kısmını silin. Dosyanın yeni adı sadece `.env` olmalıdır.
+
+3. **Token'ı Yapıştırın:**
+   - Yeni oluşturduğunuz `.env` dosyasını Not Defteri veya herhangi bir metin düzenleyici ile açın.
+   - `DISCORD_TOKEN=[addyourdiscordtokenhere]` satırındaki `[addyourdiscordtokenhere]` kısmını silip, kendi token'ınızı yapıştırın.
+   - Dosyayı kaydedip kapatın.
+
 ## Linux
 
 Linux sistemlerde Python genellikle yüklü gelir. Terminalinizi açın ve şu adımları izleyin:
