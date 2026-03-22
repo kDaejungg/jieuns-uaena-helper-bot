@@ -73,12 +73,10 @@ class MoodView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=60)
 
-    # Öneri gönderme yardımcı fonksiyonu
     async def send_recommendation(self, interaction: discord.Interaction, mood_key: str):
         songs = MOODS.get(mood_key, [])
         if songs:
             chosen_song = random.choice(songs)
-            # JSON'daki SONGS_INFO'dan detay çekmeye çalışalım
             detail = SONGS_INFO.get(chosen_song.lower().strip(), "Bu parça için detaylı bilgi henüz eklenmedi.")
             
             embed = discord.Embed(
