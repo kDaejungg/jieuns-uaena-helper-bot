@@ -183,4 +183,4 @@ Aynı sayfada aşağıda açılan **Bot Permissions** kısmından tam olarak şu
 ---
 *Made with 💜 for Uaenas by Enes Ramazan Whitelineage*
 
-#### İletişim ve geri bildirim için: [Discord](https://discord.gg/vV8gEpHDXH)
+#### İletişim ve geri bildirim için: [Discord](https://discord.gg/vV8gEpHDXH) & [Reddit](https://www.reddit.com/r/WhitelineageDEV/)
